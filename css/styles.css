@@ -45,3 +45,42 @@ header h1::before {
 header h1::after {
   right: -30px;
 }
+
+/* Options section */
+.options {
+  width: 520px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.options .option {
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+  background-color: #272833;
+  padding: 1rem;
+}
+
+.options .option:hover {
+  transform: scale(1.1);
+  background-color: #323441;
+}
+
+img {
+  width: 120px;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+footer a {
+  color: #ff6e40;
+}
