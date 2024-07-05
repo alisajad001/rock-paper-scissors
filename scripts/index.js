@@ -41,36 +41,51 @@ options.forEach((option) => {
 const determineWinner = (user, computer) => {
   if (user === computer) {
     result.innerHTML = "It was a tie!";
+    return;
   }
 
-  if (user === "Paper") {
-    if (computer === "Rock") {
-      result.innerHTML = "User Wins!";
-      userScore++;
-    } else {
-      result.innerHTML = "Computer Wins!";
-      computerScore++;
-    }
-  }
+  switch (user) {
+    case "Paper":
+      switch (computer) {
+        case "Rock":
+          result.innerHTML = "User Wins!";
+          userScore++;
+          break;
+        case "Scissors":
+          result.innerHTML = "Computer Wins!";
+          computerScore++;
+          break;
+      }
+      break;
 
-  if (user === "Rock") {
-    if (computer === "Scissors") {
-      result.innerHTML = "User Wins!";
-      userScore++;
-    } else {
-      result.innerHTML = "Computer Wins!";
-      computerScore++;
-    }
-  }
+    case "Rock":
+      switch (computer) {
+        case "Scissors":
+          result.innerHTML = "User Wins!";
+          userScore++;
+          break;
+        case "Paper":
+          result.innerHTML = "Computer Wins!";
+          computerScore++;
+          break;
+      }
+      break;
 
-  if (user === "Scissors") {
-    if (computer === "Paper") {
-      result.innerHTML = "User Wins!";
-      userScore++;
-    } else {
-      result.innerHTML = "Computer Wins!";
-      computerScore++;
-    }
+    case "Scissors":
+      switch (computer) {
+        case "Paper":
+          result.innerHTML = "User Wins!";
+          userScore++;
+          break;
+        case "Rock":
+          result.innerHTML = "Computer Wins!";
+          computerScore++;
+          break;
+      }
+      break;
+
+    default:
+      result.innerHTML = "Invalid choice!";
   }
 };
 
