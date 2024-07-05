@@ -95,14 +95,16 @@ const updateScores = () => {
   document.querySelector(".rounds").innerHTML = rounds;
   document.querySelector(".computer-choice").innerHTML = computerChoice;
 
-  if (rounds === 5) {
+  if (rounds === 6) {
     if (userScore > computerScore) {
       result.innerHTML = "User won the game!";
-      resetGame();
-    } else {
+    } else if (userScore < computerScore) {
       result.innerHTML = "Computer won the game!";
-      resetGame();
+    } else {
+      result.innerHTML = "The game is a tie!";
     }
+    resetGame();
+    return;
   }
 };
 
