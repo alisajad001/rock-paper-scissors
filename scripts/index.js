@@ -11,22 +11,12 @@ let rounds = 0;
 let userChoice;
 let computerChoice;
 
+const CHOICES = ["Rock", "Paper", "Scissors"];
+
 // Get computer choice
 const getComputerChoice = () => {
   const randomNum = Math.floor(Math.random() * 3);
-
-  switch (randomNum) {
-    case 0:
-      computerChoice = "Rock";
-      break;
-    case 1:
-      computerChoice = "Paper";
-      break;
-    case 2:
-      computerChoice = "Scissors";
-      break;
-  }
-
+  computerChoice = CHOICES[randomNum];
   return computerChoice;
 };
 
