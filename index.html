@@ -17,25 +17,26 @@
       </header>
 
       <section class="options">
-        <div class="option">
+        <div class="option" data-icon="Rock">
           <img src="images/rock.png" alt="Fist Icon" />
         </div>
-        <div class="option active">
+        <div class="option active" data-icon="Paper">
           <img src="images/paper.png" alt="Hand Icon" />
         </div>
-        <div class="option">
+        <div class="option" data-icon="Scissors">
           <img src="images/scissors.png" alt="Peace hand Icon" />
         </div>
       </section>
 
       <section class="game-results">
         <div class="scores">
-          <p>User scores: 4</p>
-          <p>Computer Scores: 1</p>
-          <p>Round: 5</p>
+          <p>User scores: <span class="user-score"></span></p>
+          <p>Computer Scores: <span class="computer-score"></span></p>
+          <p>Round: <span class="rounds"></span></p>
         </div>
 
-        <h3>It was a tie!</h3>
+        <h3 class="result"></h3>
+        <h4>Computer choice: <span class="computer-choice"></span></h4>
       </section>
     </main>
 

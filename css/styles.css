@@ -97,6 +97,14 @@ header h1::after {
   font-size: 1.8rem;
 }
 
+.game-results .computer-choice {
+  color: #ff6e40;
+}
+
+.game-results h4 {
+  color: #fff;
+}
+
 /* Footer */
 footer {
   position: absolute;
