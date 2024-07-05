@@ -69,8 +69,7 @@ header h1::after {
 }
 
 .option.active {
-  background-color: #ff6d4063;
-  border: 3px solid #ff6e40;
+  background-color: #ff6d40be;
 }
 
 .option img {

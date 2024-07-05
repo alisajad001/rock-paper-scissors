@@ -30,6 +30,10 @@ options.forEach((option) => {
   option.addEventListener("click", () => {
     userChoice = option.dataset.icon;
 
+    options.forEach((opt) => opt.classList.remove("active"));
+
+    option.classList.add("active");
+
     getComputerChoice();
     determineWinner(userChoice, computerChoice);
     rounds++;
@@ -116,4 +120,5 @@ const resetGame = () => {
   document.querySelector(".user-score").innerHTML = userScore;
   document.querySelector(".computer-score").innerHTML = computerScore;
   document.querySelector(".rounds").innerHTML = rounds;
+  options.forEach((opt) => opt.classList.remove("active"));
 };
