@@ -97,11 +97,11 @@ const updateScores = () => {
 
   if (rounds === 6) {
     if (userScore > computerScore) {
-      result.innerHTML = "User won the game!";
+      alert("User won the game!");
     } else if (userScore < computerScore) {
-      result.innerHTML = "Computer won the game!";
+      alert("Computer won the game!");
     } else {
-      result.innerHTML = "The game is a tie!";
+      alert("The game is a tie!");
     }
     resetGame();
     return;
