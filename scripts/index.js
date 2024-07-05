@@ -121,4 +121,5 @@ const resetGame = () => {
   document.querySelector(".computer-score").innerHTML = computerScore;
   document.querySelector(".rounds").innerHTML = rounds;
   options.forEach((opt) => opt.classList.remove("active"));
+  document.querySelector(".computer-choice").innerHTML = "";
 };
