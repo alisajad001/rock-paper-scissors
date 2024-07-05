@@ -1,5 +1,10 @@
 const options = document.querySelectorAll(".option");
 const result = document.querySelector(".result");
+const userScoreEl = document.querySelector(".user-score");
+const computerScoreEl = document.querySelector(".computer-score");
+const roundsEl = document.querySelector(".rounds");
+const computerChoiceEl = document.querySelector(".computer-choice");
+
 let userScore = 0;
 let computerScore = 0;
 let rounds = 0;
@@ -94,10 +99,10 @@ const determineWinner = (user, computer) => {
 };
 
 const updateScores = () => {
-  document.querySelector(".user-score").innerHTML = userScore;
-  document.querySelector(".computer-score").innerHTML = computerScore;
-  document.querySelector(".rounds").innerHTML = rounds;
-  document.querySelector(".computer-choice").innerHTML = computerChoice;
+  userScoreEl.innerHTML = userScore;
+  computerScoreEl.innerHTML = computerScore;
+  roundsEl.innerHTML = rounds;
+  computerChoiceEl.innerHTML = computerChoice;
 
   if (rounds === 6) {
     if (userScore > computerScore) {
@@ -117,9 +122,7 @@ const resetGame = () => {
   computerScore = 0;
   rounds = 0;
 
-  document.querySelector(".user-score").innerHTML = userScore;
-  document.querySelector(".computer-score").innerHTML = computerScore;
-  document.querySelector(".rounds").innerHTML = rounds;
+  updateScores();
   options.forEach((opt) => opt.classList.remove("active"));
-  document.querySelector(".computer-choice").innerHTML = "";
+  computerChoiceEl.innerHTML = "";
 };
